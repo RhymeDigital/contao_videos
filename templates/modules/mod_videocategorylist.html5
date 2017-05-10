@@ -1,0 +1,14 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <?php if (empty($this->categories)): ?>
+    <p class="empty"><?php echo $this->empty; ?></p>
+  <?php else: ?>
+    <?php foreach ($this->categories as $category): ?>
+    <?php echo implode("\n", (array)$category); ?>
+    <?php endforeach; ?>
+    <?php echo $this->pagination; ?>
+  <?php endif; ?>
+
+<?php $this->endblock(); ?>

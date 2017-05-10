@@ -1,0 +1,6 @@
+
+<div class="video_only arc_<?php echo $this->archive->id; ?> block<?php echo $this->class; ?>">
+
+  <?php echo $this->embed; ?>
+
+</div>

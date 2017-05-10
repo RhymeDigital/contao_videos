@@ -1,0 +1,3 @@
+
+var VideoRequest={toggleFeatured:function(el,id){el.blur();var image=$(el).getFirst('img'),featured=(image.src.indexOf('featured_')==-1);if(!featured){image.src=image.src.replace('featured_.gif','featured.gif');new Request.Contao().post({'action':'toggleFeaturedVideo','id':id,'state':1,'REQUEST_TOKEN':Contao.request_token});}else{image.src=image.src.replace('featured.gif','featured_.gif');new Request.Contao().post({'action':'toggleFeaturedVideo','id':id,'state':0,'REQUEST_TOKEN':Contao.request_token});}
+return false;}}

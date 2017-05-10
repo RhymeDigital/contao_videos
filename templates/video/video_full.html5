@@ -1,0 +1,24 @@
+
+<div class="layout_full block<?php echo $this->class; ?>">
+
+  <h1><?php echo $this->videoHeadline; ?></h1>
+
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info"><?php echo $this->author; ?></p>
+  <?php endif; ?>
+
+  <?php if ($this->subheadline): ?>
+    <h2><?php echo $this->subheadline; ?></h2>
+  <?php endif; ?>
+  
+  <?php echo $this->embed; ?>
+
+  <?php if ($this->text): ?>
+    <?php echo $this->text; ?>
+  <?php else: ?>
+    <div class="ce_text block">
+      <?php echo $this->teaser; ?>
+    </div>
+  <?php endif; ?>
+
+</div>
