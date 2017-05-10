@@ -1,0 +1,23 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<div class="videolist_<?php echo $this->id; ?> video_filter_wrapper">
+<form action="<?php echo $this->action; ?>" method="get">
+	<div class="formbody">
+	<input type="hidden" name="lists" value="<?php echo $this->targetlistmodules; ?>">
+	
+	<?php if (!empty($this->filters)): ?>
+	<?php foreach ($this->filters as $key=>$filter): ?>
+	<div class="video_filter filter_<?php echo $key; ?>"><?php echo $filter; ?></div>
+	<?php endforeach; ?>
+	<?php endif; ?>
+	</div>
+	
+	<div class="submit_container">
+		<input type="submit" class="submit" value="<?php echo $this->submit_label; ?>">
+	</div>
+</form>
+</div>
+
+<?php $this->endblock(); ?>
