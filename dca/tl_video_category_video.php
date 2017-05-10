@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_video_category_video'] = array
             'exclude'               => true,
             'inputType'             => 'select',
             'options_callback'		=> array('HBAgency\Backend\VideoCategoryVideo\FieldOptions', 'getCategoryVideoOptions'),
-            'eval'                  => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+            'eval'                  => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50', 'includeBlankOption'=>true, 'chosen'=>true),
             'sql'                   => "int(10) unsigned NOT NULL default '0'"
         ),
     ),
