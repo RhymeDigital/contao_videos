@@ -131,7 +131,7 @@ class Video extends \Model implements BaseVideo
         if (isset($GLOBALS['TL_HOOKS']['findVideos']) && is_array($GLOBALS['TL_HOOKS']['findVideos'])) {
             foreach ($GLOBALS['TL_HOOKS']['findVideos'] as $callback) {
                 $objCallback = \System::importStatic($callback[0]);
-                $objCallback->$callback[1]($arrOptions, static::$strCurrentMethod);
+                $objCallback->{$callback[1]}($arrOptions, static::$strCurrentMethod);
             }
         }
         
